@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <button type="button" (click)="searchStarWar()">Star Wars</button>
+        </div>
+
+        <div class="col-md-4">
+            <button type="button" (click)="searchReleasesAfter2000()">Releases After 2000</button>
+        </div>
+
+        <div class="col-md-4">
+            <button type="button" (click)="searchEpisodes()">Episodes</button>
+        </div>
+    </div>
+
+    <div class="top-10" *ngFor="let movie of movies">
+        {{movie | json}}
+    </div>
+</div>
